@@ -1,0 +1,52 @@
+{
+  "app": {
+	"name": "Uni Leipzig - Wortschatz"
+  },
+  "nav": {
+	"home": "Home",
+	"start": "Los Gehts",
+	"contact": "Kontakt",
+	"language" : "Sprache Auswählen",
+	"visit": "Ergebnisse Anschauen"
+  },
+  "intro": {
+	"heading": "Seltene Sprachen",
+	"text": "Dieses Projekt stellt ein Webinterface bereit mit dem es möglich URL's zu seltenen Sprachen zu übermitteln. Die URL's die Sie übermitteln werden auf noch unbekannten Text hin untersucht und gegebenfalls in die Datenbank übernommen. Im Anschluss können Sie abfragen wie viel neues Wissen durch Ihre übermittelten URL's gefunden und aufgenommen wurde. Danke für Ihre Unterstützung!"
+  },
+  "contact": {
+	"phone": "Telefon:",
+	"mail": "E-Mail Adresse:"
+  },
+  "wizard": {
+	"stepOne": {
+		"heading": "Schritt 1 » Bitte wähle eine Sprache aus für die URL's hinzufügen möchtest.",
+		"mail": "E-Mail Adresse:",
+		"placeholder": "Please choose a language"
+	},
+	"stepTwo": {
+		"heading": "Schritt 2 » Bitte füge deine URL's ein",
+		"inputfield": "Bitte eine URL pro Zeile eingeben!"
+	},
+	"stepThree": {
+		"heading": "Schritt 3 » Verarbeitung der URL's",
+		"warning": "URL ist bereits in der Datenbank vorhanden!",
+		"error": "Die URL ist nicht valide !"
+	},
+	"stepFour": {
+		"heading": "Fertig » Danke für deine Unterstützung!",
+		"info": "Deine hinzugefügten URL's werden bald gecrawlt! Falls du die Ergebnisse anschauen möchtest klicke bitte folgenden Link!",
+		"link": "«Meine Crawling Ergebnisse»",
+		"emailInfo": "Falls wir Ihenen einen Email senden sollen, die dich über den aktuellen crawling deine URL's informiert, fülle bitte das Formular aus.",
+		"sendEmail": "Sende mir eine Email"
+	},
+	"controls": {
+		"continue": "Weiter",
+		"previous": "Zurück",
+		"restart": "Nochmal",
+		"stepOne": "Sprache Auswählen",
+		"stepTwo": "URL's hinzufügen",
+		"stepThree": "Verarbeite Daten",
+		"stepFour": "Fertig"
+	}
+  }
+}

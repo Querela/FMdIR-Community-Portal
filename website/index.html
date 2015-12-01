@@ -45,28 +45,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a id="logoLink" class="navbar-brand" href="#">Uni Leipzig - Wortschatz</a>
+                <a id="logoLink" class="navbar-brand" href="#" data-i18n="app.name"></a>
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Lets's Start <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a id="menuAddLinks" href="#test">Adding URL's</a></li>
-                            <li><a href="#">Visit Your Results</a></li>
-                        </ul>
-                    </li>
+                    <li class="active"><a href="#" data-i18n="nav.home"></a></li>
+                    <li><a id="menuAddLinks" href="#test" data-i18n="nav.start"></a></li>
+                    <li><a href="#" data-i18n="nav.visit"></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#contact" data-toggle="modal" data-target="#myModal">Contact</a></li>
+                    <li><a href="#contact" data-toggle="modal" data-target="#myModal" data-i18n="nav.contact"></a></li>
                     <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Choose Language <span class="caret"></span></a>
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span data-i18n="nav.language"></span> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Choose a language</li>
                             <li role="separator" class="divider"></li>
-                            <li><a href="#"><img src="img/blank.gif" class="flag flag-gb" alt="Tschechischen Republik"/> English</a></li>
-                            <li><a href="#"><img src="img/blank.gif" class="flag flag-de" alt="Tschechischen Republik"/> German</a></li>
+                            <li><a id="english" href="#"><img src="img/blank.gif" class="flag flag-gb" alt="Tschechischen Republik"/> English</a></li>
+                            <li><a id="german" href="#"><img src="img/blank.gif" class="flag flag-de" alt="Tschechischen Republik"/> German</a></li>
                             <li><a href="#"><img src="img/blank.gif" class="flag flag-es" alt="Tschechischen Republik"/> Spanish</a></li>
                             <li><a href="#"><img src="img/blank.gif" class="flag flag-fr" alt="Tschechischen Republik"/> French</a></li>
                         </ul>
@@ -81,13 +76,8 @@
 
         <!-- Main component for a primary marketing message or call to action -->
         <div id="intro" class="jumbotron">
-            <h1>Rarely Languages</h1>
-            <p>
-				This project provide a web interface to add url's to find text for rarely languages.
-				The url's you provide will be crawled and reviewed for new text data. 
-				Afterwards you can request how many new data was found through your provided URL's. 
-				Thank you for your Support!
-			</p>
+            <h1 data-i18n="intro.heading"></h1>
+            <p data-i18n="intro.text"></p>
         </div>
 
         <!-- Main component for a primary marketing message or call to action -->
@@ -100,22 +90,22 @@
                             <ul class="nav nav-tabs" role="tablist">
 
                                 <li role="presentation" class="active">
-                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Select Language">
+                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Select Language" data-i18n="[title]wizard.controls.stepOne">
                                         <span class="round-tab">
-									<i class="glyphicon glyphicon-folder-open"></i>
-								</span>
+											<i class="glyphicon glyphicon-folder-open"></i>
+										</span>
                                     </a>
                                 </li>
 
                                 <li role="presentation" class="disabled">
-                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Adding URL's">
+                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Adding URL's" data-i18n="[title]wizard.controls.stepTwo">
                                         <span class="round-tab">
 									<i class="glyphicon glyphicon-pencil"></i>
 								</span>
                                     </a>
                                 </li>
                                 <li role="presentation" class="disabled">
-                                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Processing Data">
+                                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Processing Data" data-i18n="[title]wizard.controls.stepThree">
                                         <span class="round-tab">
 									<i class="glyphicon glyphicon-cog"></i>
 								</span>
@@ -123,7 +113,7 @@
                                 </li>
 
                                 <li role="presentation" class="disabled">
-                                    <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                                    <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete" data-i18n="[title]wizard.controls.stepFour">
                                         <span class="round-tab">
 									<i class="glyphicon glyphicon-ok"></i>
 								</span>
@@ -135,7 +125,7 @@
                         <form role="form">
                             <div class="tab-content">
                                 <div class="tab-pane active" role="tabpanel" id="step1">
-                                    <h3>Step 1 &raquo; Please select a language where you want to add url's.</h3>
+                                    <h3 data-i18n="[html]wizard.stepOne.heading"></h3>
                                     </br>
                                     </br>
                                     <div id="the-basics">
@@ -146,26 +136,26 @@
 
                                     <ul class="list-inline pull-right">
                                         <li>
-                                            <button id="firstStep" type="button" class="btn btn-primary next-step">Continue</button>
+                                            <button id="firstStep" type="button" class="btn btn-primary next-step" data-i18n="wizard.controls.continue"></button>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step2">
-                                    <h3>Step 2 &raquo; Please insert your URL's</h3>
+                                    <h3 data-i18n="wizard.stepTwo.heading"></h3>
                                     </br>
-                                    <textarea class="form-control" rows="12" placeholder="Please add 1 URL per line!"></textarea>
+                                    <textarea class="form-control" rows="12" data-i18n="[placeholder]wizard.stepTwo.inputfield"></textarea>
                                     </br>
                                     <ul class="list-inline pull-right">
                                         <li>
-                                            <button type="button" class="btn btn-default prev-step">Previous</button>
+                                            <button type="button" class="btn btn-default prev-step" data-i18n="wizard.controls.previous"></button>
                                         </li>
                                         <li>
-                                            <button type="button" class="btn btn-primary next-step">Continue</button>
+                                            <button type="button" class="btn btn-primary next-step" data-i18n="wizard.controls.continue"></button>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step3">
-                                    <h3>Step 3 &raquo; Processing URL's</h3>
+                                    <h3 data-i18n="wizard.stepThree.heading"></h3>
                                     </br>
                                     <div class="form-group has-success has-feedback">
                                         <div class="input-group">
@@ -184,7 +174,7 @@
                                         <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
                                     </div>
 									<div class="form-group has-warning has-feedback">
-										<label class="control-label" for="inputWarning2">URL always exist in database!</label>
+										<label class="control-label" for="inputWarning2" data-i18n="wizard.stepThree.warning"></label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
                                             <input disabled="" type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status" value="http://getbootstrap.com/components/#glyphicons">
@@ -209,7 +199,7 @@
                                         <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
                                     </div>
 									<div class="form-group has-error has-feedback">
-										<label class="control-label" for="inputError2">No valid URL !</label>
+										<label class="control-label" for="inputError2" data-i18n="wizard.stepThree.error"></label>
                                         <div class="input-group">
                                             <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
                                             <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status" value="file:///F:/Uni/Fortgeschrittene%20Methoden%20des%20Information%20Retrival/Praktikum/website/index.html#">
@@ -227,18 +217,18 @@
                                     </div>
                                     <ul class="list-inline pull-right">
                                         <li>
-                                            <button type="button" class="btn btn-default prev-step">Previous</button>
+                                            <button type="button" class="btn btn-default prev-step" data-i18n="wizard.controls.previous"></button>
                                         </li>
                                         <li>
-                                            <button type="button" class="btn btn-primary btn-info-full next-step">Continue</button>
+                                            <button type="button" class="btn btn-primary btn-info-full next-step" data-i18n="wizard.controls.continue"></button>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="complete">
-                                    <h3>Complete &raquo; Thank you for your support!</h3>
-                                    <h4>Your added URL's will be crawled soon! If you want too visit your results please click the following link! <a href="#">&laquo;My Crawling Results&raquo;</a></h4>
+                                    <h3 data-i18n="wizard.stepFour.heading"></h3>
+                                    <h4><span data-i18n="wizard.stepFour.info"></span> <a href="#" data-i18n="wizard.stepFour.link"></a></h4>
 									</br>
-									<h4>If you want to get an email about the crawling state of your submitted urls's please fill out the underlie form.</h4>
+									<h4 data-i18n="wizard.stepFour.emailInfo"></h4>
 									</br>
 									<form class="form-inline">
 										<div class="form-group">
@@ -249,12 +239,12 @@
 												<input type="text" class="form-control" id="email" placeholder="Email-Adress" style="max-width:400px;">
 											</div>
 										</div>
-										<a class="btn btn-lg btn-default" role="button" href="#">Send me an Email</a>
+										<a class="btn btn-lg btn-default" role="button" href="#" data-i18n="wizard.stepFour.sendEmail"></a>
 									</form>
 									</br>
 									<ul class="list-inline pull-right">
                                         <li>
-                                            <button type="button" class="btn btn-primary btn-info-full next-step">Restart</button>
+                                            <button type="button" class="btn btn-primary btn-info-full next-step" data-i18n="wizard.controls.restart"></button>
                                         </li>
                                     </ul>
                                 </div>
@@ -285,11 +275,11 @@
 								04103 Leipzig<br>
 							</address>
                             <address>
-								<strong>Telefon:</strong><br>
+								<strong data-i18n="contact.phone"></strong><br>
 								<abbr title="Phone">P:</abbr> (+49) - 341 - 97-32220
 							</address>
                             <address>
-								<strong>E-Mail Adresse:</strong><br>
+								<strong data-i18n="contact.mail"></strong><br>
 								<a href="mailto:wort@informatik.uni-leipzig.de">contact</a>
 							</address>
                         </div>
@@ -310,10 +300,12 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/i18next-1.11.1.min.js"></script>
     <script src="js/wizard.js"></script>
     <script src="js/typeahead.bundle.min.js"></script>
     <script src="js/typeaheadCustom.js"></script>
     <script src="js/controller.js"></script>
+    <script src="js/langControl.js"></script>
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
     <script src="js/ie10-viewport-bug-workaround.js"></script>
 </body>

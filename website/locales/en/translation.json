@@ -1,0 +1,52 @@
+{
+  "app": {
+	"name": "Uni Leipzig - Wortschatz"
+  },
+  "nav": {
+	"home": "Home",
+	"start": "Let's Start",
+	"contact": "Contact",
+	"language" : "Choose Language",
+	"visit": "Visit Your Results"
+  },
+  "intro": {
+	"heading": "Rarely Languages",
+	"text": "This project provide a web interface to add url's to find text for rarely languages. The url's you provide will be crawled and reviewed for new text data. Afterwards you can request how many new data was found through your provided URL's. Thank you for your Support!"
+  },
+  "contact": {
+	"phone": "Telephone:",
+	"mail": "E-Mail Address:"
+  },
+  "wizard": {
+	"stepOne": {
+		"heading": "Step 1 » Please select a language where you want to add url's.",
+		"mail": "E-Mail Address:",
+		"placeholder": "Please choose a language"
+	},
+	"stepTwo": {
+		"heading": "Step 2 » Please insert your URL's",
+		"inputfield": "Please add 1 URL per line!"
+	},
+	"stepThree": {
+		"heading": "Step 3 » Processing URL's",
+		"warning": "URL always exist in database!",
+		"error": "No valid URL !"
+	},
+	"stepFour": {
+		"heading": "Complete » Thank you for your support!",
+		"info": "Your added URL's will be crawled soon! If you want too visit your results please click the following link!",
+		"link": "«My Crawling Results»",
+		"emailInfo": "If you want to get an email about the crawling state of your submitted urls's please fill out the underlie form.",
+		"sendEmail": "Send me an Email"
+	},
+	"controls": {
+		"continue": "Continue",
+		"previous": "Previous",
+		"restart": "Restart",
+		"stepOne": "Select Language",
+		"stepTwo": "Adding URL's",
+		"stepThree": "Processing Data",
+		"stepFour": "Complete"
+	}
+  }
+}
