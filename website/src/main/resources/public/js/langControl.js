@@ -6,8 +6,10 @@ $(document).ready(function () {
 	};
 	
 	i18n.init(options, function(t) {
-           $(".navbar").i18n();
-           $(".container").i18n();
+		$(".navbar").i18n();
+        $(".container").i18n();
+		//Re-Initialize tooltips
+		$('.nav-tabs > li a[title]').tooltip();
 	});
 	
 	$('#german').click(function () {

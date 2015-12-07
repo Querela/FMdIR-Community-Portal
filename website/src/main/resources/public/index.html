@@ -51,7 +51,7 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="#" data-i18n="nav.home"></a></li>
                     <li><a id="menuAddLinks" href="#test" data-i18n="nav.start"></a></li>
-                    <li><a href="#" data-i18n="nav.visit"></a></li>
+                    <li><a id="menuResults" href="#" data-i18n="nav.visit"></a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="#contact" data-toggle="modal" data-target="#myModal" data-i18n="nav.contact"></a></li>
@@ -60,10 +60,10 @@
                         <ul class="dropdown-menu">
                             <li class="dropdown-header">Choose a language</li>
                             <li role="separator" class="divider"></li>
-                            <li><a id="english" href="#"><img src="img/blank.gif" class="flag flag-gb" alt="Tschechischen Republik"/> English</a></li>
-                            <li><a id="german" href="#"><img src="img/blank.gif" class="flag flag-de" alt="Tschechischen Republik"/> German</a></li>
-                            <li><a href="#"><img src="img/blank.gif" class="flag flag-es" alt="Tschechischen Republik"/> Spanish</a></li>
-                            <li><a href="#"><img src="img/blank.gif" class="flag flag-fr" alt="Tschechischen Republik"/> French</a></li>
+                            <li><a id="english" href="#"><img src="img/blank.gif" class="flag flag-gb" alt="Ebglish"/> English</a></li>
+                            <li><a id="german" href="#"><img src="img/blank.gif" class="flag flag-de" alt="German"/> German</a></li>
+                            <li><a href="#"><img src="img/blank.gif" class="flag flag-es" alt="Spanish"/> Spanish</a></li>
+                            <li><a href="#"><img src="img/blank.gif" class="flag flag-fr" alt="French"/> French</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -79,6 +79,38 @@
             <h1 data-i18n="intro.heading"></h1>
             <p data-i18n="intro.text"></p>
         </div>
+		
+		<div class="row">
+			<div id="yourResults" class="col-md-12" style="display: none;">
+				<h3 data-i18n="results.heading-form"></h3>
+				<hr>
+				<h4 data-i18n="results.text"></h4>
+				<form class="form-inline">
+					<div class="form-group">
+						<div class="input-group">
+							<div class="input-group-addon">
+								<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+							</div>
+							<input autocomplete="off" type="text" class="form-control" id="formResults" placeholder="Your Ticket ID">
+						</div>
+					</div>
+					&nbsp;&nbsp;&nbsp;&nbsp;<a id="sendToken" class="btn btn-default" role="button" href="#" data-i18n="results.Button"></a>
+				</form>
+			</div>
+			<div id="results" class="col-md-12" style="display: none;">
+				<h3 data-i18n="results.heading-result">Your Results</h3>
+				<hr>
+				<div id="resultWait" style="display: none;">
+					<h4 data-i18n="results.crawling-state-wait">Sorry your provided URL's not crawled until now! Please come back later!</h4>
+				</div>
+				<div id="resultReady" style="display: none;">
+					<h4 data-i18n="results.crawling-state-ready">Your URL's was successful crawled!</h4>
+					<h4>1. <span data-i18n="results.resultURLs">You provided:</span> <span id="resultReadyURL">487 URL's</span></h4>
+					<h4>2. <span data-i18n="results.resultSentencePartOne">Based on these URL's we find</span> <span id="resultReadySentence">15.879</span> <span data-i18n="results.resultSentencePartTwo">new sentences!</span></h4>
+				</div>
+				<h4 data-i18n="results.thankYou">Thank you for your Support!</h4>
+			</div>
+		</div>
 
         <!-- Main component for a primary marketing message or call to action -->
         <div class="container">
@@ -89,8 +121,8 @@
                             <div class="connecting-line"></div>
                             <ul class="nav nav-tabs" role="tablist">
 
-                                <li role="presentation" class="active">
-                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Select Language" data-i18n="[title]wizard.controls.stepOne">
+                                <li id="firstTab" role="presentation" class="active">
+                                    <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" data-i18n="[title]wizard.controls.stepOne">
                                         <span class="round-tab">
 											<i class="glyphicon glyphicon-folder-open"></i>
 										</span>
@@ -98,25 +130,25 @@
                                 </li>
 
                                 <li role="presentation" class="disabled">
-                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Adding URL's" data-i18n="[title]wizard.controls.stepTwo">
+                                    <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" data-i18n="[title]wizard.controls.stepTwo">
                                         <span class="round-tab">
-									<i class="glyphicon glyphicon-pencil"></i>
-								</span>
+											<i class="glyphicon glyphicon-pencil"></i>
+										</span>
                                     </a>
                                 </li>
                                 <li role="presentation" class="disabled">
-                                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Processing Data" data-i18n="[title]wizard.controls.stepThree">
+                                    <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" data-i18n="[title]wizard.controls.stepThree">
                                         <span class="round-tab">
-									<i class="glyphicon glyphicon-cog"></i>
-								</span>
+											<i class="glyphicon glyphicon-cog"></i>
+										</span>
                                     </a>
                                 </li>
 
                                 <li role="presentation" class="disabled">
-                                    <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete" data-i18n="[title]wizard.controls.stepFour">
+                                    <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" data-i18n="[title]wizard.controls.stepFour">
                                         <span class="round-tab">
-									<i class="glyphicon glyphicon-ok"></i>
-								</span>
+											<i class="glyphicon glyphicon-ok"></i>
+										</span>
                                     </a>
                                 </li>
                             </ul>
@@ -130,103 +162,73 @@
                                     </br>
                                     <div id="the-basics">
                                         <center>
-                                            <input class="typeahead tt-input" type="text" placeholder="Please choose a language" autocomplete="off">
+                                            <input id="langChooser" class="typeahead tt-input" type="text" placeholder="Please choose a language" autocomplete="off">
                                         </center>
                                     </div>
 
                                     <ul class="list-inline pull-right">
                                         <li>
-                                            <button id="firstStep" type="button" class="btn btn-primary next-step" data-i18n="wizard.controls.continue"></button>
+                                            <button disabled="disabled" id="firstStep" type="button" class="btn btn-primary next-step" data-i18n="wizard.controls.continue"></button>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step2">
-                                    <h3 data-i18n="wizard.stepTwo.heading"></h3>
+                                    <h3><span data-i18n="wizard.stepTwo.heading"></span> (MAX: <span id="numberUrls">0</span>/1000 URL's)<h3>
                                     </br>
-                                    <textarea class="form-control" rows="12" data-i18n="[placeholder]wizard.stepTwo.inputfield"></textarea>
+                                    <textarea id="urlField" class="form-control" rows="12" data-i18n="[placeholder]wizard.stepTwo.inputfield" autocomplete="off"></textarea>
                                     </br>
                                     <ul class="list-inline pull-right">
                                         <li>
                                             <button type="button" class="btn btn-default prev-step" data-i18n="wizard.controls.previous"></button>
                                         </li>
                                         <li>
-                                            <button type="button" class="btn btn-primary next-step" data-i18n="wizard.controls.continue"></button>
+                                            <button disabled="disabled" id="secondStep" type="button" class="btn btn-primary next-step" data-i18n="wizard.controls.continue"></button>
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step3">
                                     <h3 data-i18n="wizard.stepThree.heading"></h3>
                                     </br>
-                                    <div class="form-group has-success has-feedback">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                            <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" value="https://www.themoviedb.org/movie/19995-avatar/cast?language=en">
-                                        </div>
-                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                                    </div>
-									<div class="form-group has-success has-feedback">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                            <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" value="http://getbootstrap.com/components/#glyphicons">
-                                        </div>
-                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                                    </div>
-									<div class="form-group has-warning has-feedback">
-										<label class="control-label" for="inputWarning2" data-i18n="wizard.stepThree.warning"></label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                            <input disabled="" type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status" value="http://getbootstrap.com/components/#glyphicons">
-                                        </div>
-                                        <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
-                                        <span id="inputWarning2Status" class="sr-only">(warning)</span>
-                                    </div>
-									<div class="form-group has-success has-feedback">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                            <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" value="https://github.com/heyLu/fis/blob/master/script-extractor/README.md">
-                                        </div>
-                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                                    </div>
-									<div class="form-group has-success has-feedback">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                            <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" value="https://github.com/perwendel/spark/blob/master/README.md#examples">
-                                        </div>
-                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                                    </div>
-									<div class="form-group has-error has-feedback">
-										<label class="control-label" for="inputError2" data-i18n="wizard.stepThree.error"></label>
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                            <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status" value="file:///F:/Uni/Fortgeschrittene%20Methoden%20des%20Information%20Retrival/Praktikum/website/index.html#">
-                                        </div>
-                                        <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
-                                        <span id="inputError2Status" class="sr-only">(error)</span>
-                                    </div>
-									<div class="form-group has-success has-feedback">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span></span>
-                                            <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status" value="http://www.golem.de/news/smart-tv-betriebssysteme-im-test-wenn-sich-streaming-wie-fernsehen-anfuehlt-1509-115909.html">
-                                        </div>
-                                        <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
-                                        <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
-                                    </div>
-                                    <ul class="list-inline pull-right">
+									<div id="errorInfo" class="alert alert-warning alert-dismissible fade in" role="alert">
+										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
+										<strong>Attention a error occur!</strong>
+										<div id="errorInfoText">
+											Best check yo self, you're not looking too good.
+										</div>
+									</div>
+									<div>
+										<input id="proecssText" class="form-control" id="disabledInput" type="text" placeholder="Prepare transfering data ..." disabled>
+										<br>
+										<div class="progress">
+											<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%"></div>
+										</div>
+									</div>
+									<ul class="list-inline pull-right">
                                         <li>
                                             <button type="button" class="btn btn-default prev-step" data-i18n="wizard.controls.previous"></button>
                                         </li>
                                         <li>
-                                            <button type="button" class="btn btn-primary btn-info-full next-step" data-i18n="wizard.controls.continue"></button>
+                                            <button id="thirdStep" disabled="disabled" type="button" class="btn btn-primary btn-info-full next-step" data-i18n="wizard.controls.continue"></button>
                                         </li>
                                     </ul>
+									<br>
+									<br>
+									<hr>
+									<h4>Successful processed URL's:</h4>
+									<div id="urlList">
+									</div>
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="complete">
                                     <h3 data-i18n="wizard.stepFour.heading"></h3>
-                                    <h4><span data-i18n="wizard.stepFour.info"></span> <a href="#" data-i18n="wizard.stepFour.link"></a></h4>
+                                    <h4><span data-i18n="wizard.stepFour.info"></span> <a id="linkToResults" href="#" data-i18n="wizard.stepFour.link"></a></h4>
+									<div class="form-group">
+										<div class="input-group">
+											<div class="input-group-addon">
+												<span class="glyphicon glyphicon-link" aria-hidden="true"></span>
+											</div>
+											<input autocomplete="off" type="text" class="form-control" id="ticket" placeholder="Your Ticket-ID" style="max-width:300px;">
+										</div>
+									</div>
 									</br>
 									<h4 data-i18n="wizard.stepFour.emailInfo"></h4>
 									</br>
@@ -236,7 +238,7 @@
 												<div class="input-group-addon">
 													<span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
 												</div>
-												<input type="text" class="form-control" id="email" placeholder="Email-Adress" style="max-width:400px;">
+												<input autocomplete="off" type="text" class="form-control" id="email" placeholder="Your Email-Adress" style="max-width:400px;">
 											</div>
 										</div>
 										<a class="btn btn-lg btn-default" role="button" href="#" data-i18n="wizard.stepFour.sendEmail"></a>
@@ -244,7 +246,7 @@
 									</br>
 									<ul class="list-inline pull-right">
                                         <li>
-                                            <button type="button" class="btn btn-primary btn-info-full next-step" data-i18n="wizard.controls.restart"></button>
+                                            <button id="restart" type="button" class="btn btn-primary btn-info-full next-step" data-i18n="wizard.controls.restart"></button>
                                         </li>
                                     </ul>
                                 </div>

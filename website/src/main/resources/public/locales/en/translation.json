@@ -13,6 +13,18 @@
 	"heading": "Rarely Languages",
 	"text": "This project provide a web interface to add url's to find text for rarely languages. The url's you provide will be crawled and reviewed for new text data. Afterwards you can request how many new data was found through your provided URL's. Thank you for your Support!"
   },
+  "results": {
+	"heading-form": "Visit Your Results",
+	"text": "Please Insert Your Ticket ID:",
+	"Button": "Get My Results",
+	"heading-result": "Your Results",
+	"crawling-state-wait": "Sorry your provided URL's not crawled until now! Please come back later!",
+	"crawling-state-ready": "Your URL's was successful crawled!",
+	"resultURLs": "You provided:",
+	"resultSentencePartOne": "Based on these URL's we find",
+	"resultSentencePartTwo": "new sentences!",
+	"thankYou": "Thank you for your Support!"
+  },
   "contact": {
 	"phone": "Telephone:",
 	"mail": "E-Mail Address:"

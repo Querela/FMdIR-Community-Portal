@@ -13,6 +13,18 @@
 	"heading": "Seltene Sprachen",
 	"text": "Dieses Projekt stellt ein Webinterface bereit mit dem es möglich URL's zu seltenen Sprachen zu übermitteln. Die URL's die Sie übermitteln werden auf noch unbekannten Text hin untersucht und gegebenfalls in die Datenbank übernommen. Im Anschluss können Sie abfragen wie viel neues Wissen durch Ihre übermittelten URL's gefunden und aufgenommen wurde. Danke für Ihre Unterstützung!"
   },
+  "results": {
+	"heading-form": "Begutachte deine Ergebnisses",
+	"text": "Bitte gib deine Ticket ID ein:",
+	"Button": "Hole meine Ergebnisse",
+	"heading-result": "Deine Ergebnisse",
+	"crawling-state-wait": "Sorry deine bereitgestellten URL's sind bis jetzt noch nicht gecrawlt! Komm doch einfach später wieder!",
+	"crawling-state-wait": "Deine URL's wurden erfolgreich gecrawlt!",
+	"resultURLs": "Du hast bereitgestellt:",
+	"resultSentencePartOne": "Basierend auf deinen URL's konnte wir",
+	"resultSentencePartTwo": "neue Sätze finden!",
+	"thankYou": "Danke für deine Unterstützung!"
+  },
   "contact": {
 	"phone": "Telefon:",
 	"mail": "E-Mail Adresse:"
