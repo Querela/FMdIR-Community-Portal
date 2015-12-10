@@ -7,21 +7,21 @@
 	"start": "Let's Start",
 	"contact": "Contact",
 	"language" : "Choose Language",
-	"visit": "Visit Your Results"
+	"visit": "See Your Results"
   },
   "intro": {
-	"heading": "Rarely Languages",
-	"text": "This project provide a web interface to add url's to find text for rarely languages. The url's you provide will be crawled and reviewed for new text data. Afterwards you can request how many new data was found through your provided URL's. Thank you for your Support!"
+	"heading": "Rare Languages",
+	"text": "This project provides a web interface to add URLs to find text for rare languages. The URLs you provide will be crawled and reviewed for new text data. Afterwards you can request how many new data was found through your provided URLs. Thank you for your Support!"
   },
   "results": {
-	"heading-form": "Visit Your Results",
+	"heading-form": "See Your Results",
 	"text": "Please Insert Your Ticket ID:",
 	"Button": "Get My Results",
 	"heading-result": "Your Results",
-	"crawling-state-wait": "Sorry your provided URL's not crawled until now! Please come back later!",
-	"crawling-state-ready": "Your URL's was successful crawled!",
+	"crawling-state-wait": "Sorry your provided URLs have not been crawled until now! Please come back later!",
+	"crawling-state-ready": "Your URLs were successfully crawled!",
 	"resultURLs": "You provided:",
-	"resultSentencePartOne": "Based on these URL's we find",
+	"resultSentencePartOne": "Based on these URLs we found",
 	"resultSentencePartTwo": "new sentences!",
 	"thankYou": "Thank you for your Support!"
   },
@@ -31,24 +31,24 @@
   },
   "wizard": {
 	"stepOne": {
-		"heading": "Step 1 » Please select a language where you want to add url's.",
+		"heading": "Step 1 » Please select a language to which you want to add URLs.",
 		"mail": "E-Mail Address:",
 		"placeholder": "Please choose a language"
 	},
 	"stepTwo": {
-		"heading": "Step 2 » Please insert your URL's",
-		"inputfield": "Please add 1 URL per line!"
+		"heading": "Step 2 » Please insert your URLs",
+		"inputfield": "Please add one URL per line!"
 	},
 	"stepThree": {
-		"heading": "Step 3 » Processing URL's",
-		"warning": "URL always exist in database!",
+		"heading": "Step 3 » Processing URLs",
+		"warning": "URL already exists in database!",
 		"error": "No valid URL !"
 	},
 	"stepFour": {
 		"heading": "Complete » Thank you for your support!",
-		"info": "Your added URL's will be crawled soon! If you want too visit your results please click the following link!",
+		"info": "Your added URLs will be crawled soon! If you want too see your results, please click the following link!",
 		"link": "«My Crawling Results»",
-		"emailInfo": "If you want to get an email about the crawling state of your submitted urls's please fill out the underlie form.",
+		"emailInfo": "If you want to get an email about the crawling state of your submitted URLs, please fill out the underlying form.",
 		"sendEmail": "Send me an Email"
 	},
 	"controls": {
@@ -56,7 +56,7 @@
 		"previous": "Previous",
 		"restart": "Restart",
 		"stepOne": "Select Language",
-		"stepTwo": "Adding URL's",
+		"stepTwo": "Adding URLs",
 		"stepThree": "Processing Data",
 		"stepFour": "Complete"
 	}

@@ -10,13 +10,13 @@ $(document).ready(function () {
 	// inti website
 	// ================================================
 	// workaround if browser not detect that buttons are disabled
-	$('#thirdStep').attr( 'disabled', 'disabled');
+	$('#thirdStep') .attr( 'disabled', 'disabled');
 	$('#secondStep').attr( 'disabled', 'disabled');
-	$('#firstStep').attr( 'disabled', 'disabled');
+	$('#firstStep') .attr( 'disabled', 'disabled');
 		
 	// Global Variables
 	// ================================================
-	var activeSubmitt = false;
+	var activeSubmit = false;
 	
 	// Click Events
 	// ================================================
@@ -25,8 +25,8 @@ $(document).ready(function () {
 	});
 	
 	$('#secondStep').click(function () {
-		if( ! activeSubmitt ) {
-			activeSubmitt = true;
+		if( ! activeSubmit ) {
+			activeSubmit = true;
 			performStepOne();
 		}
 	});
@@ -73,10 +73,13 @@ $(document).ready(function () {
 		$('#thirdStep').attr( 'disabled', 'disabled');
 		$('#secondStep').attr( 'disabled', 'disabled');
 		$('#firstStep').attr( 'disabled', 'disabled');
-		activeSubmitt = false;
+		activeSubmit = false;
 	});
 	
 	$('#langChooser').on('input', function() {
+		checkLang();
+	});
+	$('#the-basics .typeahead').bind('typeahead:selected', function(obj, datum) {
 		checkLang();
 	});
 	

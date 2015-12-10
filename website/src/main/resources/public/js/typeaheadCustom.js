@@ -21,19 +21,23 @@ var substringMatcher = function(strs) {
   };
 };
 
+// http://stackoverflow.com/questions/16442422/jquery-populate-select-from-json
+// http://stackoverflow.com/questions/10689830/adding-a-dropdown-button-to-twitter-bootstrap-typeahead-component
+
 var states = ['English', 'Spanish', 'German', 'French', 'Italian ',
   'Russian', 'Dari', 'Kimbundu', 'Rangpuri', 'Bouyei', 'Nuosu',
   'Idaho', 'Kabyle', 'Kimbundu', 'Bengali', 'Kituba', 'Alur', 'Koongo'
 ];
 
-$('#the-basics .typeahead').typeahead({
+var typeahead = $('#the-basics .typeahead').typeahead({
   hint: true,
   highlight: true,
-  minLength: 1
+  minLength: 0
 },
 {
   name: 'states',
   source: substringMatcher(states)
 });
+// typeahead.data('typeahead', typeahead);
     
 });
