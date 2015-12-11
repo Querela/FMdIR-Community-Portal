@@ -7,7 +7,7 @@
  */
  
 $(document).ready(function () {
-	// inti website
+	// init website
 	// ================================================
 	// workaround if browser not detect that buttons are disabled
 	$('#thirdStep') .attr( 'disabled', 'disabled');
@@ -70,18 +70,25 @@ $(document).ready(function () {
 		$("#ticket").val('');
 		$('#urlList').html('');
 		$('#errorInfo').hide();
-		$('#thirdStep').attr( 'disabled', 'disabled');
+		$('#thirdStep') .attr( 'disabled', 'disabled');
 		$('#secondStep').attr( 'disabled', 'disabled');
-		$('#firstStep').attr( 'disabled', 'disabled');
+		$('#firstStep') .attr( 'disabled', 'disabled');
 		activeSubmit = false;
 	});
-	
-	$('#langChooser').on('input', function() {
-		checkLang();
-	});
-	$('#the-basics .typeahead').bind('typeahead:selected', function(obj, datum) {
-		checkLang();
-	});
+
+	(function addTypeaheadListener () {
+		var check = function () {
+			var cb = $('#langChooser').data('combobox');
+			if (cb !== undefined && cb.$element !== undefined) {
+				cb.$element.on('input', function() {
+					checkLang();
+				});
+			} else {
+				setTimeout(check, 500);
+			}
+		};
+		check();
+	})();
 	
 	$('#urlField').on('input', function() {
 		checkUrlField();
@@ -92,7 +99,11 @@ $(document).ready(function () {
 	
 	// function to check if a language is selected
 	function checkLang() {
-		var text = $("#langChooser").val();
+		var cb = $("#langChooser").data('combobox'),
+			text = '';
+		if (cb !== undefined) {
+			text = cb.$element.val().trim();
+		}
 		if(text.length == 0){
 			$("#firstStep").attr( 'disabled', 'disabled');
 		} else {

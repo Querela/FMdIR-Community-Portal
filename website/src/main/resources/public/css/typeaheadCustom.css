@@ -1,0 +1,16 @@
+#step1 ul.typeahead.dropdown-menu {
+  width: inherit !important;
+  height: inherit !important;
+}
+
+#step1 span.input-group-addon.dropdown-toggle {
+  width: 11% !important;
+  border-bottom-right-radius: 8px !important;
+  border-top-right-radius: 8px !important;
+  border-width: 2px;
+}
+
+#step1 input[type=text].typeahead {
+  border-bottom-right-radius: 0px !important;
+  border-top-right-radius: 0px !important;
+}

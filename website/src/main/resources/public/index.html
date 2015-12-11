@@ -15,6 +15,9 @@
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Style for bootstrap-combobox -->
+    <link href="css/bootstrap-combobox.css" rel="stylesheet">
+
     <!-- Font Awesome CSS -->
     <!-- link href="css/font-awesome.min.css" rel="stylesheet"> -->
 
@@ -24,6 +27,7 @@
     <!-- Custom styles for wizard -->
     <link href="css/wizard.css" rel="stylesheet">
     <link href="css/typeahead.css" rel="stylesheet">
+    <link href="css/typeaheadCustom.css" rel="stylesheet">
     <link href="css/flags.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -158,11 +162,14 @@
                             <div class="tab-content">
                                 <div class="tab-pane active" role="tabpanel" id="step1">
                                     <h3 data-i18n="[html]wizard.stepOne.heading"></h3>
-                                    </br>
-                                    </br>
+                                    <br/>
+                                    <br/>
                                     <div id="the-basics">
                                         <center>
-                                            <input id="langChooser" class="typeahead tt-input" type="text" placeholder="Please choose a language" autocomplete="off">
+                                            <select id="langChooser" class="typeahead">
+                                                <!--<option disabled>- - Please choose a language - -</option>-->
+                                                <option></option>
+                                            </select>
                                         </center>
                                     </div>
 
@@ -173,10 +180,10 @@
                                     </ul>
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step2">
-                                    <h3><span data-i18n="wizard.stepTwo.heading"></span> (MAX: <span id="numberUrls">0</span>/1000 URL's)<h3>
-                                    </br>
+                                    <h3><span data-i18n="wizard.stepTwo.heading"></span> (MAX: <span id="numberUrls">0</span>/1000 URL's)</h3>
+                                    <br/>
                                     <textarea id="urlField" class="form-control" rows="12" data-i18n="[placeholder]wizard.stepTwo.inputfield" autocomplete="off"></textarea>
-                                    </br>
+                                    <br/>
                                     <ul class="list-inline pull-right">
                                         <li>
                                             <button type="button" class="btn btn-default prev-step" data-i18n="wizard.controls.previous"></button>
@@ -188,7 +195,7 @@
                                 </div>
                                 <div class="tab-pane" role="tabpanel" id="step3">
                                     <h3 data-i18n="wizard.stepThree.heading"></h3>
-                                    </br>
+                                    <br/>
 									<div id="errorInfo" class="alert alert-warning alert-dismissible fade in" role="alert">
 										<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">×</span></button>
 										<strong>Attention a error occur!</strong>
@@ -229,9 +236,9 @@
 											<input autocomplete="off" type="text" class="form-control" id="ticket" placeholder="Your Ticket-ID" style="max-width:300px;">
 										</div>
 									</div>
-									</br>
+									<br/>
 									<h4 data-i18n="wizard.stepFour.emailInfo"></h4>
-									</br>
+									<br/>
 									<form class="form-inline">
 										<div class="form-group">
 											<div class="input-group">
@@ -243,7 +250,7 @@
 										</div>
 										<a class="btn btn-lg btn-default" role="button" href="#" data-i18n="wizard.stepFour.sendEmail"></a>
 									</form>
-									</br>
+									<br/>
 									<ul class="list-inline pull-right">
                                         <li>
                                             <button id="restart" type="button" class="btn btn-primary btn-info-full next-step" data-i18n="wizard.controls.restart"></button>
@@ -268,7 +275,7 @@
                     </div>
                     <div class="modal-body">
                         <div style="margin-left:160px;">
-                            </br>
+                            <br/>
                             <address>
 								<strong>Universität Leipzig</strong><br/>
 								Fakultät für Mathematik und Informatik<br/>
@@ -303,6 +310,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrap-combobox.js"></script>
     <script src="js/i18next-1.11.1.min.js"></script>
     <script src="js/wizard.js"></script>
     <script src="js/typeahead.bundle.min.js"></script>
